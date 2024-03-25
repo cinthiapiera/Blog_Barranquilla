@@ -43,11 +43,11 @@ export default function CommentsContainer({category, referentId}){
   }, [comments])
 
   return (
-    <div>
+    <div className="flex flex-col gap-4 p-4">
       <CommentForm text={text} setText={textHandler} saveComment={saveComment}/>
-      {comments.filter((comment) => comment.category == category && comment.referentId == referentId).map((comment) => (
-        <Comment key={comment.id} id={comment.id} description={comment.description} deleteComment={deleteComment} editComment={editComment}/>
-      ))} 
+        {comments.filter((comment) => comment.category == category && comment.referentId == referentId).map((comment) => (
+          <Comment key={comment.id} id={comment.id} description={comment.description} deleteComment={deleteComment} editComment={editComment}/>
+        ))}
     </div>
   )
 }

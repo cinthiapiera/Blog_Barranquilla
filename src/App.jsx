@@ -1,11 +1,20 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
+import Home from './pages/Home'
+import TouristicAttractions from './pages/TouristicAttractions'
+import TouristicAttraction from './pages/TouristicAttraction'
 
 function App() {
 
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world day!
-    </h1>
+    <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/TouristicAttractions' element={<TouristicAttractions/>}/>
+          <Route path='/TouristicAttractions/:id' element={<TouristicAttraction/>}/>
+        </Routes>
+    </BrowserRouter>
+
   )
 }
 

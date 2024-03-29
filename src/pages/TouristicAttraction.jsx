@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { getTouristicAttractionById } from "../services/colombia_api_service";
 import CommentsContainer from "../components/CommentsContainer";
-import { RiArrowGoBackFill } from "react-icons/ri";
+import { BiArrowBack } from "react-icons/bi";
 import { FaFacebook, FaTwitter, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
 export default function TouristicAttraction() {
@@ -24,7 +24,7 @@ export default function TouristicAttraction() {
         <div className="container flex flex-col items-center px-5 py-16 mx-auto md:flex-row lg:px-16">
           <div className="flex flex-col items-start mb-16 text-left lg:flex-grow md:w-1/2 lg:pr-16 md:pr-16 md:mb-0">
             <div className="flex items-center mb-8">
-              <RiArrowGoBackFill />
+              <BiArrowBack />
               <div className="ml-2">
                 <button onClick={() => navigate(-1)} className="text-xs font-semibold tracking-widest text-black uppercase title-font">Volver</button>
               </div>

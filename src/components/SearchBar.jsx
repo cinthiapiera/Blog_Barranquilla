@@ -1,18 +1,21 @@
-import { FaSearch } from "react-icons/fa";
+import { BiSearch } from "react-icons/bi";
 
 export default function SearchBar({ searchItem, handleInputChange }) {
   return (
-    <div className="relative mt-4 ">
-      <input
-        type="text"
-        className="border border-gray-300 rounded-lg py-2 px-4 pl-10 shadow-md focus:outline-none focus:ring focus:border-violet-400 w-1/2 "
-        value={searchItem}
-        onChange={handleInputChange}
-        placeholder="Type to search"
-      />
-      <div className="absolute inset-y-0 left-1/4 pl-3 flex items-center pointer-events-none">
-        <FaSearch className="text-gray-400" />
+    <form className="max-w-md">
+      <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
+      <div className="relative">
+        <input
+          type="text"
+          value={searchItem}
+          onChange={handleInputChange}
+          placeholder="Type to search"
+          className="block w-full p-4 pl-10 pr-8 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50"
+        />
+        <div className="absolute inset-y-0 left-0 flex items-center pl-3">
+          <BiSearch />
+        </div>
       </div>
-    </div>
+    </form>
   );
 }

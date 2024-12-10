@@ -5,12 +5,10 @@ import { NewContainer } from "../components/NewContainer";
 
 export default function Home() {
   return (
-    <main className="px-4 pt-6">
+    <div className="bg-gray-100">
       <Header />
-      <div className="sm:flex gap-8">
-        <MainArticle />
-        <NewContainer />
-      </div>
-    </main>
+      <MainArticle />
+      <NewContainer />
+    </div>
   )
 }

@@ -1,24 +1,27 @@
-import { Link } from "react-router-dom";
-import imageMobile from '../assets/images/mobile.png'
-import imageDesktop from '../assets/images/web.png'
+// import backgroundImage from "../assets/barranquilla.png";
+// import backgroundImage2 from "../assets/barranquilla_2.png";
+import backgroundImage3 from "../assets/barranquilla_3.jpg";
 
 export const MainArticle = () => {
   return (
-    <section className="mb-12">
-      <picture>
-        <source media="(max-width: 640px)" srcSet={imageMobile}/>
-        <source media="(min-width: 641px)" srcSet={imageDesktop}/>
-        <img src={imageMobile} alt="articulo principal" />
-      </picture>
-      <div className='sm:flex'>
-        <div className="flex-1 py-6"> 
-          <h2 className="text-gray-800 text-[40px] font-bold sm:text-[58px] leading-none">Nuestros encantos turísticos</h2> 
-        </div>
-        <div className="flex-1 pt-9">
-          <p className="text-[13px] mb-10 sm:text-[15px]">Adéntrate en la diversidad de nuestra ciudad con una selección cuidadosa de destinos turísticos. Desde playas hasta la rica vida nocturna, encuentra todo lo que nuestra ciudad tiene para ofrecer.</p>
-          <Link to={"TouristicAttractions"} className="flex items-center justify-center w-48 h-12  text-white bg-SoftBlue font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Ver destinos</Link>
-        </div>
+    <main
+      className="relative min-h-screen bg-cover bg-center flex items-center justify-center"
+      style={{
+        backgroundImage: `url(${backgroundImage3})`,
+      }}
+    >
+      {/* Capa de superposición */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-blue-800 opacity-90"></div>
+
+      {/* Contenido */}
+      <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/4 z-10 text-center text-white px-4">
+        <h1 className="text-6xl font-bold tracking-wide drop-shadow-lg">
+          Embárcate, Sumérgete y Comparte
+        </h1>
+        <p className="text-lg mt-4 drop-shadow-xl text-white opacity-100 bg-blue-700 bg-opacity-70 px-6 py-2 inline-block">
+          ¡Ven y descubre la historia, el arte y la cultura de la cuna del Carnaval!
+        </p>
       </div>
-    </section>
+    </main>
   )
 }

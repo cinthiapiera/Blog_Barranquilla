@@ -1,5 +1,3 @@
-// import backgroundImage from "../assets/barranquilla.png";
-// import backgroundImage2 from "../assets/barranquilla_2.png";
 import backgroundImage3 from "../assets/barranquilla_3.jpg";
 
 export const MainArticle = () => {

@@ -28,18 +28,18 @@ export default function TouristicAttraction() {
             <div className="flex items-center mb-6">
               <button
                 onClick={() => navigate(-1)}
-                className="flex items-center text-blue-600 hover:text-blue-800 text-sm font-semibold tracking-wide"
+                className="flex items-center text-gray-800 hover:text-blue-700 text-sm font-semibold tracking-wide"
               >
                 <BiArrowBack className="mr-2 text-lg" />
                 Volver
               </button>
             </div>
             {/* Título */}
-            <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-blue-800 md:text-5xl">
+            <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-blue-700 md:text-5xl">
               {touristicAttraction.name}
             </h1>
             {/* Descripción */}
-            <p className="mb-8 text-lg leading-relaxed text-gray-600">
+            <p className="mb-8 text-lg leading-relaxed text-gray-800">
               {touristicAttraction.description}
             </p>
           </div>

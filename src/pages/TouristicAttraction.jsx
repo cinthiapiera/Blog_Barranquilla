@@ -35,11 +35,11 @@ export default function TouristicAttraction() {
               </button>
             </div>
             {/* Título */}
-            <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-blue-700 md:text-5xl">
+            <h1 className="mb-6 text-2xl font-extrabold tracking-tight text-blue-700 md:text-5xl">
               {touristicAttraction.name}
             </h1>
             {/* Descripción */}
-            <p className="mb-8 text-lg leading-relaxed text-gray-800">
+            <p className="mb-8 leading-relaxed text-gray-700">
               {touristicAttraction.description}
             </p>
           </div>

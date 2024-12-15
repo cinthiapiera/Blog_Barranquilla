@@ -1,33 +1,26 @@
-import { useState } from 'react'
-
-export default function Comment({id, description, deleteComment, editComment}) {
-  const [state, setState] = useState(false)
-  const [change, setChange] = useState(description)
-
+export default function Comment({
+  id,
+  description,
+  deleteComment,
+  editComment,
+}) {
   return (
-    <div className='flex flex-col gap-4 p-4 rounded-2xl border-2 border-slate-700 border-solid'>
-      {state ? 
-        <textarea 
-          onChange={(e) => setChange(e.target.value)} 
-          value={change}
-          className='h-32 p-4 rounded-2xl border-2 border-slate-700 border-solid text-lg resize-none'
-          ></textarea> : 
-        <p className='text-lg max-w-72 break-words'>{description}</p>}
-      <button 
-        onClick={() => deleteComment(id)}
-        className='rounded-2xl px-1 py-2 self-end bg-slate-400 text-lg active:scale-90'
-        >Borrar</button>
-      {state ? <button 
-        onClick={() => {
-          editComment(id, change)
-          setState(false)
-          }}
-        className='rounded-2xl px-1 py-2 self-end bg-slate-400 text-lg active:scale-90'
-        >Guardar</button> : 
-        <button 
-          onClick={() => setState(true)}
-          className='rounded-2xl px-1 py-2 self-end bg-slate-400 text-lg active:scale-90'
-          >Editar</button>}
+    <div className="p-4 mb-4 bg-gray-100 border border-gray-200 rounded-lg shadow-md">
+      <p className="text-gray-800">{description}</p>
+      <div className="mt-4 flex space-x-4">
+        <button
+          onClick={() => editComment(id, prompt("Edita tu comentario:", description))}
+          className="text-sm text-blue-600 hover:underline"
+        >
+          Editar
+        </button>
+        <button
+          onClick={() => deleteComment(id)}
+          className="text-sm text-red-600 hover:underline"
+        >
+          Eliminar
+        </button>
+      </div>
     </div>
-  )
+  );
 }
